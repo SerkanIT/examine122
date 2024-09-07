@@ -1,3 +1,5 @@
+let questions = [];
+
 function login() {
   let modme = document.getElementById("modmeid").value;
   let pass = document.getElementById("password").value;
@@ -5,36 +7,39 @@ function login() {
   let p = document.getElementById("welcome");
   let bye = document.getElementById("bye");
 
-  // Store the modme and pass in local storage
   localStorage.setItem("modme", modme);
   localStorage.setItem("pass", pass);
 
   if (modme === "633161" && pass === "serkan") {
     p.textContent = "Welcome to my House ✌️⭕";
-    function text() {
-      p.textContent = " ";
-    }
-    setTimeout(text, 2000);
+    setTimeout(() => {
+      p.textContent = "";
+    }, 2000);
   } else {
     bye.textContent = "Get out from my House! (❁´◡`❁)";
-    function text() {
-      bye.textContent = " ";
-    }
-    setTimeout(text, 2000);
+    setTimeout(() => {
+      bye.textContent = "";
+    }, 2000);
   }
 }
 
-document.getElementById("promptButton").addEventListener("click", function () {
-  let userInput = prompt("What is your question:");
-  let output;
-
-  if (userInput) {
-    document.getElementById("output").innerText = userInput;
-  } else {
-    document.getElementById("output").innerText = "You wrote nothing.";
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    login();
   }
-  setTimeout(userInput, 2000)
 });
+
+document.getElementById("promptButton").addEventListener("click", function () {
+  let userInput = prompt("What is your question?");
+  if (userInput) {
+    questions.push(userInput);
+    updateQuestionsDisplay();
+  }
+});
+
+function updateQuestionsDisplay() {
+  document.getElementById("output").innerHTML = questions.join("<br>");
+}
 
 window.onload = function () {
   if (localStorage.getItem("modme")) {
