@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap');
+
+* {
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.id-write {
+    font-family: 'El Messiri', sans-serif;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 2px solid orange;
+    padding: 12px 20px;
+    font-weight: 600;
+    width: 300px;
+}
+
+div>h2 {
+    font-family: "El Messiri", sans-serif;
+    margin-bottom: 20px;
+    margin-top: 100px;
+}
+
+div {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.pass-write {
+    font-family: 'El Messiri', sans-serif;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 2px solid orange;
+    padding: 12px 20px;
+    font-weight: 600;
+    margin-top: 10px;
+    width: 300px;
+}
+
+.enter {
+    background-color: orange;
+    color: white;
+    outline: none;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 300px;
+}
+
+#welcome {
+    font-family: "El Messiri", sans-serif;
+    margin-top: 20px;
+    color: green;
+}
+
+#bye {
+    font-family: "El Messiri", sans-serif;
+    margin-top: 20px;
+    color: red;
+}
+
+.ques {
+    background-color: orange;
+    color: white;
+    outline: none;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 300px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.quess{
+    font-family: "El Messiri", sans-serif;
+}
+
+#output{
+    margin-top: 15px;
+    font-family: "El Messiri", sans-serif;
+    color: #ff805d;
+    font-size: 24px;
+}
